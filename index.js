@@ -84,10 +84,12 @@ switch (foo) {
 
 let age = 35
 for (let ageNum = 0; ageNum < 200; ageNum++) {
+    break;
     switch (age) {
         case ageNum:
             let personAge = ageNum;
             console.log(ageNum); 
+            break;
         default:
             console.log('No age')
     };
@@ -115,6 +117,11 @@ let personThree = {
 personThree.driver = personThree.age >=16 ? 'Yes' : 'No';
 console.log(personThree.driver);
 
+let personAge = 19;
+
+let getsDiscount = (personAge >= 65 || personAge < 18) ? 'Yes' : 'No';
+console.log("Does this person recieve a discount: " + getsDiscount);
+
 let isStudent = true;
 let price = isStudent ? 8 : 12; 
 console.log(price);
@@ -130,3 +137,12 @@ for (let missileLaunchTimer = 10;; missileLaunchTimer--) {
         break;
     };
 };
+
+let customer = { age: 17, hasVoucher: true };
+
+let costDiscount = customer.hasVoucher ? "30 Percent" : (customer.age < 18 || customer.age >= 65) ? "20 Percent" : "0 Percent";
+console.log("Customer discount is " + costDiscount);
+
+let gradePercent = 57
+
+let gradeLetter = (gradePercent <= 100 && gradePercent > 84) ? "A+" : (gradePercent < 85 && gradePercent > 79) ? "A" : (gradePercent < 80 && gradePercent > 74) ? "A-" : (gradePercent < 75 && gradePercent > 69) ? "B+" : (gradePercent < 70 && gradePercent > 64) ? "B" : (gradePercent < 65 && gradePercent > 59) ? "B-" : (gradePercent < 60 && gradePercent > 54) ? "C+" : (gradePercent < 55 && gradePercent > 49) ? "C" : (gradePercent < 50 && gradePercent > 39) ? "D" : (gradePercent < 40 && gradePercent >= 0) ? "E" : null;
