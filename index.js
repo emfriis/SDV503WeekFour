@@ -82,6 +82,17 @@ switch (foo) {
     console.log('I don\'t like this number.');
 }
 
+let age = 35
+for (let ageNum = 0; ageNum < 200; ageNum++) {
+    switch (age) {
+        case ageNum:
+            let personAge = ageNum;
+            console.log(ageNum); 
+        default:
+            console.log('No age')
+    };
+};
+
 let personTwo = {
     name: 'tony',
     age: 20,
